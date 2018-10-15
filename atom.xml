@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bibiwangke123.github.io/"/>
-  <updated>2018-09-29T02:11:20.513Z</updated>
+  <updated>2018-10-15T03:00:19.109Z</updated>
   <id>https://bibiwangke123.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://bibiwangke123.github.io/2018/09/27/xing/"/>
     <id>https://bibiwangke123.github.io/2018/09/27/xing/</id>
     <published>2018-09-27T08:52:02.948Z</published>
-    <updated>2018-09-29T02:11:20.513Z</updated>
+    <updated>2018-10-15T03:00:19.109Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Sun Sep 30 2018 13:02:58 GMT+0800 (中国标准时间) --><p>copyright : ture</p><p>标签：linux 快捷键 shell 快速 休闲<br>​ 这篇文章来自chinaunix的lovesaka的&lt;&lt;linux命令行编辑&gt;&gt;<br>原文地址:[url]<a href="http://bbs.chinaunix.net/thread-846189-1-1.html[/url]" target="_blank" rel="noopener">http://bbs.chinaunix.net/thread-846189-1-1.html[/url]</a><br>​ 很早就看过这里的内容了,之所以会找到这篇文章,是因为我的linux恩师,曾经提到过一些常用的快捷键操作.所以好不容易才在网上找到了这篇文章的.而且到现在一直在实践里面的东西.不但会让你做事的效率提高而且还挺有高手风范的,所以帖出来希望大家都能掌握.<br>​<br>方向 ＜－前 后 -＞<br>删除<br>ctrl + d 删除光标所在位置上的字符相当于VIM里x或者dl<br>ctrl + h 删除光标所在位置前的字符相当于VIM里hx或者dh<br>ctrl + k 删除光标后面所有字符相当于VIM里d shift+$<br>ctrl + u 删除光标前面所有字符相当于VIM里d shift+^<br>ctrl + w 删除光标前一个单词相当于VIM里db<br>ctrl + y 恢复ctrl+u上次执行时删除的字符<br>ctrl + ? 撤消前一次输入<br>alt + r 撤消前一次动作<br>alt + d 删除光标所在位置的后单词</p><p>移动<br>ctrl + a 将光标移动到命令行开头相当于VIM里shift+^<br>ctrl + e 将光标移动到命令行结尾处相当于VIM里shift+$<br>ctrl + f 光标向后移动一个字符相当于VIM里l<br>ctrl + b 光标向前移动一个字符相当于VIM里h<br>ctrl + 方向键左键 光标移动到前一个单词开头<br>ctrl + 方向键右键 光标移动到后一个单词结尾<br>ctrl + x 在上次光标所在字符和当前光标所在字符之间跳转<br>alt + f 跳到光标所在位置单词尾部</p><p>替换<br>ctrl + t 将光标当前字符与前面一个字符替换<br>alt + t 交换两个光标当前所处位置单词和光标前一个单词<br>alt + u 把光标当前位置单词变为大写<br>alt + l 把光标当前位置单词变为小写<br>alt + c 把光标当前位置单词头一个字母变为大写<br>^oldstr^newstr 替换前一次命令中字符串</p><p>历史命令编辑<br>ctrl + p 返回上一次输入命令字符<br>ctrl + r 输入单词搜索历史命令<br>alt + p 输入字符查找与字符相接近的历史命令<br>alt + &gt; 返回上一次执行命令</p><p>其它<br>ctrl + s 锁住终端<br>ctrl + q 解锁终端<br>ctrl + l 清屏相当于命令clear<br>ctrl + c 另起一行<br>ctrl + i 类似TAB健补全功能<br>ctrl + o 重复执行命令<br>alt + 数字键 操作的次数<br>实际操作:</p><p>#c+l 清屏先<br>minuit@suse:~&gt;str1 str2 str3 #输入三个单词发现第一单词需要大写好按c+a跳到开头按a+c<br>minuit@suse:~&gt; Str1 str2 str3 #好现在单词就变成了现在这个样子,又发现第二个单词要全大写(这样的命令真是玩死人:( )好吧如果你当前光标在第二个单词,那直接a+u把这个单词改变,如果不在的话那按住c+a接着c+f跳到第二个单词那再a+u就OK了结果像下面所示<br>。<br>minuit@suse:~&gt; Str1 STR2 str3 #我想换过来怎么办我的位置已经在最后一个单词这个好办按住a+2+b哈哈跳到了第二个单词再来一下a+l这下第二个单词全小写了,再来一个比较典型的例子<br>[url]<a href="http://bbs.chinaunix.net/viewthread.php?tid=842595[/url]" target="_blank" rel="noopener">http://bbs.chinaunix.net/viewthread.php?tid=842595[/url]</a><br>标题:如何将数据文件中的每个词的第一个字母变成大写？<br>哈哈这个难不到我们吧因为我们已经会了a+c了<br>minuit@suse:~&gt; welcome to chinaunix! #不就是变个大小写吗按住c+a接着a+3+c看看效果<br>minuit@suse:~&gt; Welcome To Chinaunix! #GOOD很简单<br>我们再来试试替换<br>minuit@suse:~&gt; Welcome To Chinaunix! #还是这三单词c+a跳到开头再接着跳到第二个单词那(因为a+t只能跟前一个单词做替换所以不能在第一个单词按a+t)按住a+t<br>minuit@suse:~&gt; To Welcome Chinaunix! #现在成这样子的了如果我用再按a+2+t那又变了一个样<br>minuit@suse:~&gt; Chinaunix! Welcome To #好了来一点比较常用的<br>minuit@suse:~&gt;ls /tmp/ #看看下面有些什么<br>file1 file2 file3 ….. ..<br>minuit@suse:~&gt;^ls^cd #现在再又想进入目录很简单的健入替换命令就行了在命令很长时用这个替换可以省掉很多按a+b或a+f的时间<br>cd /tmp/<br>minuit@suse:/tmp&gt; #进入了tmp目录了<br>跳转的命令就不试了大家自己体会试也看不见^_^</p><p>Linux下复制粘贴快捷键</p><ol><li><p>在控制台下：<br>​ 1.1、鼠标选中要复制的文本，按鼠标中键，即为复制</p><pre><code>                或者 1.2、复制命令：Ctrl + Insert  组合键　　或　　用鼠标选中即是复制。     粘贴命令：Shift + Insert  组合键　　或　　单击鼠标滚轮即为粘贴。 </code></pre><p><a href="http://www.2cto.com" target="_blank" rel="noopener">www.2cto.com</a></p></li><li><p>在终端下：</p><pre><code>复制命令：Ctrl + Shift + C  组合键. 粘贴命令：Ctrl + Shift + V  组合键.</code></pre></li></ol><p>来源： <a href="http://youzicha123.blog.163.com/blog/getBlog.do?bid=fks_087068083083086065082082095064072084087065080080086067085080" target="_blank" rel="noopener">http://youzicha123.blog.163.com/blog/getBlog.do?bid=fks_087068083083086065082082095064072084087065080080086067085080</a></p><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Mon Oct 15 2018 11:00:39 GMT+0800 (中国标准时间) --><p>title: new start<br>date: 2018-09-27 15:53:26</p><p>标签：linux 快捷键 shell 快速 休闲<br>​ 这篇文章来自chinaunix的lovesaka的&lt;&lt;linux命令行编辑&gt;&gt;<br>原文地址:[url]<a href="http://bbs.chinaunix.net/thread-846189-1-1.html[/url]" target="_blank" rel="noopener">http://bbs.chinaunix.net/thread-846189-1-1.html[/url]</a><br>​ 很早就看过这里的内容了,之所以会找到这篇文章,是因为我的linux恩师,曾经提到过一些常用的快捷键操作.所以好不容易才在网上找到了这篇文章的.而且到现在一直在实践里面的东西.不但会让你做事的效率提高而且还挺有高手风范的,所以帖出来希望大家都能掌握.<br>​<br>方向 ＜－前 后 -＞<br>删除<br>ctrl + d 删除光标所在位置上的字符相当于VIM里x或者dl<br>ctrl + h 删除光标所在位置前的字符相当于VIM里hx或者dh<br>ctrl + k 删除光标后面所有字符相当于VIM里d shift+$<br>ctrl + u 删除光标前面所有字符相当于VIM里d shift+^<br>ctrl + w 删除光标前一个单词相当于VIM里db<br>ctrl + y 恢复ctrl+u上次执行时删除的字符<br>ctrl + ? 撤消前一次输入<br>alt + r 撤消前一次动作<br>alt + d 删除光标所在位置的后单词</p><p>移动<br>ctrl + a 将光标移动到命令行开头相当于VIM里shift+^<br>ctrl + e 将光标移动到命令行结尾处相当于VIM里shift+$<br>ctrl + f 光标向后移动一个字符相当于VIM里l<br>ctrl + b 光标向前移动一个字符相当于VIM里h<br>ctrl + 方向键左键 光标移动到前一个单词开头<br>ctrl + 方向键右键 光标移动到后一个单词结尾<br>ctrl + x 在上次光标所在字符和当前光标所在字符之间跳转<br>alt + f 跳到光标所在位置单词尾部</p><p>替换<br>ctrl + t 将光标当前字符与前面一个字符替换<br>alt + t 交换两个光标当前所处位置单词和光标前一个单词<br>alt + u 把光标当前位置单词变为大写<br>alt + l 把光标当前位置单词变为小写<br>alt + c 把光标当前位置单词头一个字母变为大写<br>^oldstr^newstr 替换前一次命令中字符串</p><p>历史命令编辑<br>ctrl + p 返回上一次输入命令字符<br>ctrl + r 输入单词搜索历史命令<br>alt + p 输入字符查找与字符相接近的历史命令<br>alt + &gt; 返回上一次执行命令</p><p>其它<br>ctrl + s 锁住终端<br>ctrl + q 解锁终端<br>ctrl + l 清屏相当于命令clear<br>ctrl + c 另起一行<br>ctrl + i 类似TAB健补全功能<br>ctrl + o 重复执行命令<br>alt + 数字键 操作的次数<br>实际操作:</p><p>#c+l 清屏先<br>minuit@suse:~&gt;str1 str2 str3 #输入三个单词发现第一单词需要大写好按c+a跳到开头按a+c<br>minuit@suse:~&gt; Str1 str2 str3 #好现在单词就变成了现在这个样子,又发现第二个单词要全大写(这样的命令真是玩死人:( )好吧如果你当前光标在第二个单词,那直接a+u把这个单词改变,如果不在的话那按住c+a接着c+f跳到第二个单词那再a+u就OK了结果像下面所示<br>。<br>minuit@suse:~&gt; Str1 STR2 str3 #我想换过来怎么办我的位置已经在最后一个单词这个好办按住a+2+b哈哈跳到了第二个单词再来一下a+l这下第二个单词全小写了,再来一个比较典型的例子<br>[url]<a href="http://bbs.chinaunix.net/viewthread.php?tid=842595[/url]" target="_blank" rel="noopener">http://bbs.chinaunix.net/viewthread.php?tid=842595[/url]</a><br>标题:如何将数据文件中的每个词的第一个字母变成大写？<br>哈哈这个难不到我们吧因为我们已经会了a+c了<br>minuit@suse:~&gt; welcome to chinaunix! #不就是变个大小写吗按住c+a接着a+3+c看看效果<br>minuit@suse:~&gt; Welcome To Chinaunix! #GOOD很简单<br>我们再来试试替换<br>minuit@suse:~&gt; Welcome To Chinaunix! #还是这三单词c+a跳到开头再接着跳到第二个单词那(因为a+t只能跟前一个单词做替换所以不能在第一个单词按a+t)按住a+t<br>minuit@suse:~&gt; To Welcome Chinaunix! #现在成这样子的了如果我用再按a+2+t那又变了一个样<br>minuit@suse:~&gt; Chinaunix! Welcome To #好了来一点比较常用的<br>minuit@suse:~&gt;ls /tmp/ #看看下面有些什么<br>file1 file2 file3 ….. ..<br>minuit@suse:~&gt;^ls^cd #现在再又想进入目录很简单的健入替换命令就行了在命令很长时用这个替换可以省掉很多按a+b或a+f的时间<br>cd /tmp/<br>minuit@suse:/tmp&gt; #进入了tmp目录了<br>跳转的命令就不试了大家自己体会试也看不见^_^</p><p>Linux下复制粘贴快捷键</p><ol><li><p>在控制台下：<br>​ 1.1、鼠标选中要复制的文本，按鼠标中键，即为复制</p><pre><code>                或者 1.2、复制命令：Ctrl + Insert  组合键　　或　　用鼠标选中即是复制。     粘贴命令：Shift + Insert  组合键　　或　　单击鼠标滚轮即为粘贴。 </code></pre><p><a href="http://www.2cto.com" target="_blank" rel="noopener">www.2cto.com</a></p></li><li><p>在终端下：</p><pre><code>复制命令：Ctrl + Shift + C  组合键. 粘贴命令：Ctrl + Shift + V  组合键.</code></pre></li></ol><p>来源： <a href="http://youzicha123.blog.163.com/blog/getBlog.do?bid=fks_087068083083086065082082095064072084087065080080086067085080" target="_blank" rel="noopener">http://youzicha123.blog.163.com/blog/getBlog.do?bid=fks_087068083083086065082082095064072084087065080080086067085080</a></p><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Sun Sep 30 2018 13:02:58 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;copyright : ture&lt;/p&gt;&lt;p&gt;标签：linux 快捷键 shell 快速 休闲&lt;br&gt;​ 这篇文章来自chinaunix的lovesa
+        &lt;!-- build time:Mon Oct 15 2018 11:00:39 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;title: new start&lt;br&gt;date: 2018-09-27 15:53:26&lt;/p&gt;&lt;p&gt;标签：linux 快捷键 shell 快速 休
       
     
     </summary>
@@ -42,15 +42,15 @@
     <link href="https://bibiwangke123.github.io/2018/09/27/new-start/"/>
     <id>https://bibiwangke123.github.io/2018/09/27/new-start/</id>
     <published>2018-09-27T07:53:26.000Z</published>
-    <updated>2018-09-27T07:53:26.975Z</updated>
+    <updated>2018-10-15T03:00:31.457Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Sun Sep 30 2018 13:02:58 GMT+0800 (中国标准时间) --><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Mon Oct 15 2018 11:00:39 GMT+0800 (中国标准时间) --><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Sun Sep 30 2018 13:02:58 GMT+0800 (中国标准时间) --&gt;&lt;!-- rebuild by neat --&gt;
+        &lt;!-- build time:Mon Oct 15 2018 11:00:39 GMT+0800 (中国标准时间) --&gt;&lt;!-- rebuild by neat --&gt;
       
     
     </summary>
